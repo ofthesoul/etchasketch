@@ -157,8 +157,9 @@ submitbtn.addEventListener("click", (e) => {
   if (newGridArray[0] > 100 || newGridArray[1] > 100) {
     alert("Use a smaller grid size!")
     return;
-  } else {
-    container.innerHTML = "";
+  } else if (isNaN(newGridArray) || isNaN(newGridArray[0]) || isNaN(newGridArray[1])) {
+    alert("Please type in rows x columns format. For example: '20x20'");
+  } else { container.innerHTML = "";
     makeRows(newGridArray[0], newGridArray[1]);
   };
 });
@@ -169,6 +170,8 @@ gridInput.addEventListener("keyup", (e) => {
     if (newGridArray[0] > 100 || newGridArray[1] > 100) {
     alert("Use a smaller grid size!")
     return;
+    } else if (isNaN(newGridArray) || isNaN(newGridArray[0]) || isNaN(newGridArray[1])) {
+      alert("Please type in rows x columns format. For example: '20x20'");
   } else {
     container.innerHTML = "";
     makeRows(newGridArray[0], newGridArray[1]);
