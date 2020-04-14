@@ -108,7 +108,7 @@ colorbtn.addEventListener('click', (e) => {
   eraserChangeFlag = false;
   eraserbtn.style.backgroundColor = "pink";
   realismChangeFlag = false;
-  realbtn.style.backgroundColor = "gray"; 
+  realbtn.style.backgroundColor = "lightgray"; 
   rainbowChangeFlag = false;
   rainbowbtn.style.backgroundColor = "violet";
     colorChange();
@@ -121,7 +121,7 @@ rainbowbtn.addEventListener('click', (e) => {
       eraserChangeFlag = false;
       eraserbtn.style.backgroundColor = "pink";
       realismChangeFlag = false;
-      realbtn.style.backgroundColor = "gray";
+      realbtn.style.backgroundColor = "lightgray";
     } else {
       rainbowbtn.style.backgroundColor = "violet";
     };    
@@ -145,7 +145,7 @@ eraserbtn.addEventListener('click', (e) => {
     if (eraserChangeFlag === true) {
       eraserbtn.style.backgroundColor = "black";
       realismChangeFlag = false;
-      realbtn.style.backgroundColor = "gray";
+      realbtn.style.backgroundColor = "lightgray";
       rainbowChangeFlag = false;
       rainbowbtn.style.backgroundColor = "violet";
     } else {
