@@ -112,6 +112,10 @@ rainbowbtn.addEventListener('click', (e) => {
   rainbowChangeFlag = !rainbowChangeFlag;
     if (rainbowChangeFlag === true) {
       rainbowbtn.style.backgroundColor = "black";
+      eraserChangeFlag = false;
+      eraserbtn.style.backgroundColor = "pink";
+      realismChangeFlag = false;
+      realbtn.style.backgroundColor = "gray";
     } else {
       rainbowbtn.style.backgroundColor = "violet";
     };    
@@ -121,6 +125,10 @@ realbtn.addEventListener('click', (e) => {
   realismChangeFlag = !realismChangeFlag;
   if (realismChangeFlag === true) {
     realbtn.style.backgroundColor = "black";
+    eraserChangeFlag = false;
+    eraserbtn.style.backgroundColor = "pink";
+    rainbowChangeFlag = false;
+    rainbowbtn.style.backgroundColor = "violet";
   } else {
     realbtn.style.backgroundColor = "lightgray";
   };    
@@ -130,6 +138,10 @@ eraserbtn.addEventListener('click', (e) => {
   eraserChangeFlag = !eraserChangeFlag;
     if (eraserChangeFlag === true) {
       eraserbtn.style.backgroundColor = "black";
+      realismChangeFlag = false;
+      realbtn.style.backgroundColor = "gray";
+      rainbowChangeFlag = false;
+      rainbowbtn.style.backgroundColor = "violet";
     } else {
       eraserbtn.style.backgroundColor = "pink";
     };    
