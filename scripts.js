@@ -46,6 +46,9 @@ function colorChange() {
     if (newClick >= 9) {
       newClick = 0;
     }
+    eraserChangeFlag = false;
+    rainbowChangeFlag = false;
+    realismChangeFlag = false;
     colorbtn.style.backgroundColor = colors[newClick];
 }
 
