@@ -175,8 +175,8 @@ function stringtoArray(gridUInput) {
   //resets the grid and uses the userinput array specs for new one
 submitbtn.addEventListener("click", (e) => {
   getInput(document.getElementById("gridInput").value);
-  if (newGridArray[0] > 100 || newGridArray[1] > 100) {
-    alert("Use a smaller grid size!")
+  if (newGridArray[0] > 100 || newGridArray[1] > 100 || newGridArray[0] < 1 || newGridArray[1] < 1) {
+    alert("Please use a row and column size between 1 and 99!")
     return;
   } else if (isNaN(newGridArray[0]) || isNaN(newGridArray[1])) {
     alert("Please type in rows x columns format. For example: '20x20'");
@@ -188,8 +188,8 @@ submitbtn.addEventListener("click", (e) => {
 gridInput.addEventListener("keyup", (e) => {
   if (e.keyCode === 13) {
    getInput(document.getElementById("gridInput").value);
-    if (newGridArray[0] > 100 || newGridArray[1] > 100) {
-    alert("Use a smaller grid size!")
+    if (newGridArray[0] > 100 || newGridArray[1] > 100 || newGridArray[0] < 1 || newGridArray[1] < 1) {
+    alert("Please use a row and column size between 1 and 99!")
     return;
     } else if (isNaN(newGridArray[0]) || isNaN(newGridArray[1])) {
       alert("Please type in rows x columns format. For example: '20x20'");
