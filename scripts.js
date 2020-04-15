@@ -42,13 +42,10 @@ function makeRows(rows, cols) {
 
   //changes the color selection and on button itself
 function colorChange() {
-    newClick++;
-    if (newClick >= 9) {
+  newClick++;
+  if (newClick >= 9) {
       newClick = 0;
-    }
-    eraserChangeFlag = false;
-    rainbowChangeFlag = false;
-    realismChangeFlag = false;
+  };
     colorbtn.style.backgroundColor = colors[newClick];
 }
 
@@ -108,13 +105,16 @@ clearbtn.addEventListener('click', (e) => {
 });
   //changes color selection
 colorbtn.addEventListener('click', (e) => { 
-  eraserChangeFlag = false;
-  eraserbtn.style.backgroundColor = "pink";
-  realismChangeFlag = false;
-  realbtn.style.backgroundColor = "lightgray"; 
-  rainbowChangeFlag = false;
-  rainbowbtn.style.backgroundColor = "violet";
+  if ((eraserChangeFlag === true) || (realismChangeFlag === true) || (rainbowChangeFlag === true)) {
+    eraserChangeFlag = false;
+    rainbowChangeFlag = false;
+    realismChangeFlag = false;
+    rainbowbtn.style.backgroundColor = "violet";
+    realbtn.style.backgroundColor = "lightgray"; 
+    eraserbtn.style.backgroundColor = "pink";
+  } else if ((eraserChangeFlag === false) && (realismChangeFlag === false) && (rainbowChangeFlag === false)) {
     colorChange();
+  };
 });
   //toggle rainbow mode - changes color every mouseover
 rainbowbtn.addEventListener('click', (e) => {  

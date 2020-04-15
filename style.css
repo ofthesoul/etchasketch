@@ -81,7 +81,7 @@ ul {
       align-items: center;
       display: flex;
       justify-content: center;
-      padding-right: 4px;
+      padding-right: 8px;
 }
 #submitbtn {
     background-color: white; 
