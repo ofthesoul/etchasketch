@@ -5,6 +5,7 @@ A pixel art maker with several modes and fully custom grid sizing.
 Getting Started
 
 All you need is a modern web browser to play. 
+Play here: https://ofthesoul.github.io/etchasketch/
 
 Built With
 
